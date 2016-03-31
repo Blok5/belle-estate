@@ -1,0 +1,124 @@
+html, body, div, span, object, iframe,
+h1, h2 , h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, 
+var, b, u, i, center, dl, dt, dd, ol, ul, 
+li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+
+}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+:focus {outline: 0;}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr, .hide {display: none;}
+a img {
+    border: none;
+    color: rgba(255,255,255, 0.8);
+}
+.group:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	line-height:0;
+	height:0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(255,255,255, 0.8);
+	background: #72a8cc;
+}
+a:link, a:visited {
+    color: rgba(255,255,255, 0.8);
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+h2 {
+	
+}
+h3 {
+	
+}
+p {
+	margin-bottom: 1em;
+}
+.container {
+	margin-left: auto;
+    margin-right: auto;
+    width: 83.333%;
+}
+header {
+    position: absolute;
+    font-size: 1.1em;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+header .logo {
+    position: absolute;
+    height: 70px;
+    width: 20%;
+    margin-left: 8%;
+}
+header .menu {
+    margin-left: 30%;
+    vertical-align: top;
+    line-height: 70px;
+    display: inline-block;
+    width: 70%;
+}
+header .menu ul li {
+    font-size: 1.2em;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 5%;
+}
+.mainBlock {
+    padding-top: 150px;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+}
+.mainBlock span {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.4em;
+}
+.buttonBackCall {
+    font-size: 1em;
+    background-color: rgba(255,255,255, 0.2);
+    display: inline-block;
+    color: rgba(255,255,255, 0.8);
+    
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5em 2em;
+    border: 2px solid;
+    border-radius: 3px;
+    transition: 0.2s;
+    width: 15%;
+    height: 50px;
+}
+.buttonBackCall:hover {
+    background-color: rgba(255,255,255, 0.8);
+}

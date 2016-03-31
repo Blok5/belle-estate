@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test example1</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
+
+		<script type="text/javascript" src = "vendors/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/changeTopSec.js"></script>
+		<link rel="stylesheet" href="css/css.min.css" >
+		<style>
+			.color1{
+				background: url(img/1.jpeg);
+				background-attachment:fixed;
+				background-size: cover;
+			}
+		    .color2{
+		    	background: url(img/2.jpg);
+		    	background-attachment:fixed;
+		    	background-size: cover;
+		    }
+		    .color3{
+		    	background: url(img/3.jpg);
+		    	background-attachment:fixed;
+		    	background-size: cover;
+		    }
+		    .color4 {
+		    	background: url(img/4.jpg);
+		    	background-attachment:fixed;
+		    	background-size: cover;
+		    }
+		    .animate {
+			      -webkit-transition: all .8s;
+			         -moz-transition: all .8s;
+			          -ms-transition: all .8s;
+			              transition: all .8s;    
+    		} 
+		</style>
+		    <script>
+			  
+			      $(function() {
+			    
+			      var topHeight = document.documentElement.clientHeight;
+			      if (topHeight > 1024) topHeight=1080;
+
+			      document.getElementById('top-sec').setAttribute('style','height:' + topHeight + 'px'); 
+			    });
+     
+    		</script>
+	</head>
+	<body>
+		<header>
+			<div class = "logo" >
+				<div> <img style="width: 80%;" src="img/logo.png"></div>
+			</div><!--
+			--><div class = "menu" >
+			    	<ul>
+				    	<li><a href="#">Главная</a></li><!--
+				     --><li><a href="#">О нас</a></li><!--
+				     --><li><a href="#">Предложения</a></li><!--
+				     --><li><a href="#">Контакты</a></li>
+			     	</ul>
+			</div>
+		</header>
+		    	
+		<section>
+			   	
+		    	<div id="top-sec" class="container">
+		    		<div class="mainBlock">
+		    			<span>
+		    				<h1>BELLE ESTATE<br>
+							Консалтинговая компания. </h1>
+							Недвижимость по рекомендации.<br>
+
+							Приобретение недвижимости в самом изысканном и эмоциональном месте земного шара.<br>
+							Лазурное побережье Франции, Княжество Монако, Италия.<br>
+							Индивидуальный подход к каждому клиенту.<br>
+							На нашем сайте представлены не все предложения.<br>
+							Свяжитесь с нами и мы найдем Вам недвижимость Вашей мечты.<br>
+		    			</span><br>
+		    			<button class="buttonBackCall">Обратный звонок</button>
+		    		</div>
+		    		
+		    	</div>
+		    </div>
+		</section> 
+		</script>
+		<script async type="text/javascript" src = 'js/js.js'></script>
+	</body>
+</html>
