@@ -8,7 +8,7 @@
             if(curNumber > 4){
                 curNumber = 1;
             }
-            document.getElementById('top-sec').setAttribute('class', 'slideshow animate color' + curNumber);
+            document.getElementById('top-sec').setAttribute('class', 'animate color' + curNumber);
             //document.getElementById('for-what').setAttribute('class', 'for-what animate textcolor' + curNumber);
             setTimeout(function(){changeColor(curNumber)}, 6000); 
             

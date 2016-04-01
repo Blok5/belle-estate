@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Test example1</title>
+		<title>Belle Estate - Недвижимость на лазурном берегу</title>
+		<meta name="description" content="Консалтинговая компания 'Belle Estate' ">
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
-
+		<meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, недвижимость">
+		<meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
 		<script type="text/javascript" src = "vendors/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="js/changeTopSec.js"></script>
+		<script type="text/javascript" src="js/changeTopSec.js">
+		</script>
+
+		<script type="text/javascript" src="js/scroll.js"></script>
 		<link rel="stylesheet" href="css/css.min.css" >
 		<style>
 			.color1{
-				background: url(img/1.jpeg);
+				background: url(img/1.jpg);
 				background-attachment:fixed;
 				background-size: cover;
 			}
 		    .color2{
-		    	background: url(img/2.jpg);
+		    	background: url(img/3.jpg);
 		    	background-attachment:fixed;
 		    	background-size: cover;
 		    }
 		    .color3{
-		    	background: url(img/3.jpg);
+		    	background: url(img/2.jpg);
 		    	background-attachment:fixed;
 		    	background-size: cover;
 		    }
@@ -30,20 +35,21 @@
 		    	background-size: cover;
 		    }
 		    .animate {
-			      -webkit-transition: all .8s;
-			         -moz-transition: all .8s;
-			          -ms-transition: all .8s;
-			              transition: all .8s;    
+			    -webkit-transition: all .8s;
+			       -moz-transition: all .8s;
+			        -ms-transition: all .8s;
+			            transition: all .8s;    
     		} 
 		</style>
 		    <script>
 			  
-			      $(function() {
-			    
-			      var topHeight = document.documentElement.clientHeight;
-			      if (topHeight > 1024) topHeight=1080;
+			    $(function() {			    
+			        var topHeight = document.documentElement.clientHeight;
 
-			      document.getElementById('top-sec').setAttribute('style','height:' + topHeight + 'px'); 
+			        if (topHeight > 1024) { 
+			    		topHeight = 1080; 
+			        }
+			      	document.getElementById('top-sec').setAttribute('style','height:' + topHeight + 'px'); 
 			    });
      
     		</script>
@@ -51,40 +57,111 @@
 	<body>
 		<header>
 			<div class = "logo" >
-				<div> <img style="width: 80%;" src="img/logo.png"></div>
+				<a href="http://belle-estate.com/"><img style="width: 80%;" src="img/logo.png"></a>
 			</div><!--
-			--><div class = "menu" >
+			--><div class = "menu inline-block" >
 			    	<ul>
-				    	<li><a href="#">Главная</a></li><!--
-				     --><li><a href="#">О нас</a></li><!--
-				     --><li><a href="#">Предложения</a></li><!--
-				     --><li><a href="#">Контакты</a></li>
+				    	<li class="header-item"><a href="#top-sec">Главная</a></li><!--
+				     --><li class="header-item"><a href="#whyWe">О нас</a></li><!--
+				     --><li class="header-item"><a href="#">Предложения</a></li><!--
+				     --><li class="header-item"><a href="#">Контакты</a></li>
 			     	</ul>
 			</div>
 		</header>
 		    	
-		<section>
-			   	
-		    	<div id="top-sec" class="container">
-		    		<div class="mainBlock">
-		    			<span>
-		    				<h1>BELLE ESTATE<br>
-							Консалтинговая компания. </h1>
-							Недвижимость по рекомендации.<br>
-
-							Приобретение недвижимости в самом изысканном и эмоциональном месте земного шара.<br>
-							Лазурное побережье Франции, Княжество Монако, Италия.<br>
-							Индивидуальный подход к каждому клиенту.<br>
-							На нашем сайте представлены не все предложения.<br>
-							Свяжитесь с нами и мы найдем Вам недвижимость Вашей мечты.<br>
-		    			</span><br>
-		    			<button class="buttonBackCall">Обратный звонок</button>
-		    		</div>
-		    		
-		    	</div>
-		    </div>
+		<section id="top-sec">			   	
+		    <div class="wrap container main">
+		    	<div class="tcell">
+		    		<span>
+		    			<h1>BELLE ESTATE<br>
+						Консалтинговая компания. </h1>
+						Недвижимость по рекомендации.<br>
+						Приобретение недвижимости в самом изысканном и эмоциональном месте земного шара.<br>
+						Лазурное побережье Франции, Княжество Монако, Италия.<br>
+						Индивидуальный подход к каждому клиенту.<br>
+						На нашем сайте представлены не все предложения.<br>
+						Свяжитесь с нами и мы найдем Вам недвижимость Вашей мечты.<br>
+	    			</span>
+	    			<div class="buttons">
+		    			<button class="myButton">Обратный звонок</button>
+		    			<a href="#whyWe">
+		    			<button style="margin-left: 5%;" class="myButton">Почему мы?</button></a>
+	    			</div>
+	    		</div>
+	    	</div>    		
 		</section> 
-		</script>
-		<script async type="text/javascript" src = 'js/js.js'></script>
+
+		<section id="whyWe" class="wrap container">
+			<h2>ЧЕМ МЫ МОЖЕМ БЫТЬ ВАМ ПОЛЕЗНЫ</h2>
+			<div class="main-icons">
+				<div class="body-icon">
+					<div class="blok">
+						<div class="icons ico_search"></div>	
+						<div class="icon-text">					
+							Подбор недвижимости по заданным Вами параметрам. Туры по объектам.
+						</div>
+					</div>
+				</div><!--
+			 --><div class="body-icon">
+					<div class="blok">
+						<div class="icons ico_documents"></div>
+						<div class="icon-text">
+							Полный спектр юридических услуг — проверка и анализ объектов на юридическую чистоту. Консультации по налогам и кредитам. Защита в суде.
+						</div>
+					</div>	
+				</div><!--
+			 --><div class="body-icon">
+					<div class="blok">
+						<div class="icons ico_people"></div>	
+						<div class="icon-text">					
+							Послепродажное абонентское обслуживание и сопровождение вида на жительство.
+						</div>
+					</div>
+				</div><!--	
+			 --><div class="body-icon">
+					<div class="blok">
+						<div class="icons ico_car"></div>	
+						<div class="icon-text">					
+							Встреча в аэропорту на машине бизнес-класса, сопровождение к гостинице.
+						</div>
+					</div>
+				</div><!--
+			 --><div class="body-icon">
+					<div class="blok">
+						<div class="icons ico_design"></div>	
+						<div class="icon-text">					
+							Услуги в области ремонтных работ и дизайнерского оформления.
+						</div>
+					</div>	
+				</div><!--
+			 --><div class="body-icon">
+					<div class="blok">
+						<div class="icons ico_boat"></div>	
+						<div class="icon-text">					
+							Аренда и продажа яхт.
+						</div>
+					</div>
+				</div>
+			</div>			
+		</section>
+
+		<section id="offers" class="wrap">
+		<div class="container animate">
+			<div class="offers-req">
+				<div style="margin-left: 1.7em;"  class="offers-text"> Покупка</div>
+				<a href="#"><img class="animate" src="img/buy.jpg"></a>
+			</div>
+			<div class="offers-req">
+				<div class="offers-text"> Аренда</div>
+				<a href="#"><img class="animate" src="img/rent.jpg"></a>
+			</div>
+			<div class="offers-req">
+				<div class="offers-text"> Услуги</div>
+				<a href="#"><img class="animate" src="img/ysl.jpg"></a>
+			</div>
+		</div>	
+		</section>
+
+	
 	</body>
 </html>
