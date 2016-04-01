@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
 		<meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, недвижимость">
 		<meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
-		<script type="text/javascript" src = "vendors/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="js/changeTopSec.js">
-		</script>
-
-		<script type="text/javascript" src="js/scroll.js"></script>
 		<link rel="stylesheet" href="css/css.min.css" >
+		
+		<script type="text/javascript" src = "vendors/jquery-2.1.4.min.js"></script>
+		<script async type="text/javascript" src="js/changeTopSec.js"></script>
+		<script src="js/sendCallBackData.js"></script>
+		
 		<style>
 			.color1{
 				background: url(img/1.jpg);
@@ -41,36 +41,31 @@
 			            transition: all .8s;    
     		} 
 		</style>
-		    <script>
-			  
-			    $(function() {			    
-			        var topHeight = document.documentElement.clientHeight;
-
-			        if (topHeight > 1024) { 
-			    		topHeight = 1080; 
-			        }
-			      	document.getElementById('top-sec').setAttribute('style','height:' + topHeight + 'px'); 
-			    });
-     
-    		</script>
+		<script>			  
+			$(function() {			    
+			    var topHeight = document.documentElement.clientHeight;
+		        if (topHeight > 1024) { topHeight = 1080; }
+		      	document.getElementById('top-sec').setAttribute('style','height:' + topHeight + 'px'); 
+			});		     			
+		</script>
 	</head>
 	<body>
-		<header>
+		<header class="head">
 			<div class = "logo" >
-				<a href="http://belle-estate.com/"><img style="width: 80%;" src="img/logo.png"></a>
+				<a href="http://belle-estate.com/"><img src="img/logo.png"></a>
 			</div><!--
 			--><div class = "menu inline-block" >
 			    	<ul>
 				    	<li class="header-item"><a href="#top-sec">Главная</a></li><!--
 				     --><li class="header-item"><a href="#whyWe">О нас</a></li><!--
-				     --><li class="header-item"><a href="#">Предложения</a></li><!--
-				     --><li class="header-item"><a href="#">Контакты</a></li>
+				     --><li class="header-item"><a href="#offers">Предложения</a></li><!--
+				     --><li class="header-item"><a href="#contacts">Контакты</a></li>
 			     	</ul>
 			</div>
 		</header>
 		    	
 		<section id="top-sec">			   	
-		    <div class="wrap container main">
+		    <div class="center container main">
 		    	<div class="tcell">
 		    		<span>
 		    			<h1>BELLE ESTATE<br>
@@ -83,15 +78,38 @@
 						Свяжитесь с нами и мы найдем Вам недвижимость Вашей мечты.<br>
 	    			</span>
 	    			<div class="buttons">
-		    			<button class="myButton">Обратный звонок</button>
-		    			<a href="#whyWe">
-		    			<button style="margin-left: 5%;" class="myButton">Почему мы?</button></a>
+		    			<button id="call" type="button" class="myButton">Обратный звонок</button>
+		    			<a href="#whyWe"><button style="margin-left: 5%;" class="myButton">Почему мы?</button></a>
+		    			<div class="overlay" id="overlay" style="display:none;"></div>  <!--это фоновый блок, тот самый оверлэй--> 
+				        <div class="nonebox" id="nonebox">  <!--это блок который мы изначально скрываем-->
+				            <a class="box-close" id="box-close"></a>  <!--если клкаем сюда блок закрывается-->
+				            <h4 style="text-align: center; padding-bottom: 0.5em;">Свяжитесь с нами: </h4>
+				            <form name="okGo" id="okGo">
+				                <fieldset>
+				                    <label>Ваше имя*</label>
+				                    <input id="name" type="text" required>
+				                </fieldset>
+				                <fieldset>
+				                    <label>Ваше телефон*</label>
+				                    <input id="phone" type="tel" required>
+				                </fieldset>
+				                <fieldset>
+				                    <label>Ваш E-mail</label>
+				                    <input id="email" type="email">
+				                </fieldset>
+				                <fieldset>
+				                    <label>Сообщение*</label>
+				                    <textarea id="message" required></textarea>
+				                </fieldset>              
+				            </form>
+				            <button id="SendFormButton" class="myButton" onclick="sendCallBackData()">Отправить</button>  
+	    				</div>
 	    			</div>
 	    		</div>
 	    	</div>    		
 		</section> 
 
-		<section id="whyWe" class="wrap container">
+		<section id="whyWe" class="center container">
 			<h2>ЧЕМ МЫ МОЖЕМ БЫТЬ ВАМ ПОЛЕЗНЫ</h2>
 			<div class="main-icons">
 				<div class="body-icon">
@@ -145,7 +163,7 @@
 			</div>			
 		</section>
 
-		<section id="offers" class="wrap">
+		<section id="offers" class="center padding-top-bot">
 		<div class="container animate">
 			<div class="offers-req">
 				<div style="margin-left: 1.7em;"  class="offers-text"> Покупка</div>
@@ -162,6 +180,48 @@
 		</div>	
 		</section>
 
-	
+		<section id="contacts" class="padding-top-bot container" >
+			<div class="inline-block map">
+				<iframe style="width: 100%;" src="https://www.google.com/maps/d/u/0/embed?mid=zLJVLdivL68o.katXN3k0Jlq8" height="350"></iframe>
+			</div><!--
+
+		 --><div style="width: 50%; vertical-align: top;" class="to-right center inline-block">
+				<h2>Наши контакты:</h2>
+				<div>
+					<h4>Via Luigi Nuvoloni, 18, 18038 Sanremo IM, Italy</h4>
+					<div class="cont-block inline-block">
+						<h5>Russia</h5>
+						<p>Elena 
+						<a href ="tel:+79264008404">+7 926 400 84 04</a>
+						</p>
+						<p>Eleonora 
+						<a href ="tel:+79165098340">+7 916 509 83 40</a>
+						</p>							
+					</div><!--
+				 --><div class="cont-block inline-block">
+						<h5>Italy</h5>
+						<a href ="tel:+79264008404">+39 366 4244791</a>		
+					</div>
+					<button class="myButton">Обратный звонок</button>
+				</div>
+			</div>
+
+		</section> 
+
+		<footer>
+			<div class = "menu inline-block" >
+			    	<ul>
+				    	<li class="header-item"><a href="#top-sec">Главная</a></li><!--
+				     --><li class="header-item"><a href="#whyWe">О нас</a></li><!--
+				     --><li class="header-item"><a href="#offers">Предложения</a></li><!--
+				     --><li class="header-item"><a href="#contacts">Контакты</a></li>
+			     	</ul>
+			</div>
+			<p class="center">©&nbsp;2015-2016 <a href="http://belle-estate.com"> Belle Estate</a></p>
+		</footer>
+
+		<script src="js/scroll.js"></script>
+		<script src="js/modalWindow.js"></script>
+		
 	</body>
 </html>

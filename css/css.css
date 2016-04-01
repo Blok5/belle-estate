@@ -55,16 +55,29 @@ h1 {
     font-weight: 700;
 }
 h2 {
+    font-size: 1.3em;
 	margin: 3em 0 2em 0;
 }
 h3 {
 	font-size: 1.2em;
 }
-p {
-	margin-bottom: 1em;
+h4 {
+    margin: 1.1em;
+}
+h5 {
+    margin: 1em;
+}
+.padding-top-bot {
+    padding: 50px 0;
 }
 .inline-block {
     display: inline-block;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
 }
 .container {
 	margin-left: auto;
@@ -72,21 +85,24 @@ p {
     width: 83.333%;
     max-width: 1000px;
 }
-header {
+/*********************Header section*****************************/
+.head {
     z-index: 10;
     position: absolute;
     height: 70px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
 }
-header .logo {
+.logo {
     position: absolute;
     height: 70px;
     width: 20%;
     margin-left: 8%;
 }
-
-header .menu {
+.logo a img {
+    width: 80%;
+}
+.menu {
     margin-left: 30%;
     line-height: 70px;
     display: inline-block;
@@ -97,7 +113,7 @@ header .menu {
     display: inline-block;
     margin-left: 5%;
 }
-
+/***************************MainBlock section***********************/
 
 .main {
     padding-top: 5em;
@@ -113,9 +129,7 @@ header .menu {
     position: relative;
     max-height: 1024px;
 }
-.wrap {
-    text-align: center;
-}
+
 .wrap span {
     color: rgba(255,255,255,0.9);
     font-size: 1.4em;
@@ -146,7 +160,7 @@ header .menu {
     background-color: rgba(255,255,255, 0.2);
 }
 
-
+/**********************Icons and whyWe sec****************************/
 .main-icons {
     margin-top: 30px;
 }
@@ -209,7 +223,7 @@ header .menu {
   width: 64px
 }
 
-
+/*********************Offers section*****************************/
 #offers {
     background-color: white;
     padding: 50px 0 50px 0;
@@ -233,6 +247,7 @@ header .menu {
     opacity: 0.6;
     color: white;
 }
+
 .offers-text {
     color: rgba(255,255,255,1);
     margin: 1.6em 0 1em 2em;
@@ -242,3 +257,79 @@ header .menu {
     border-bottom: 4px solid #72a8cc;
     
 }
+/**********************footer section****************************/
+#contacts h2 {
+    margin-top: 0;
+}
+.map {
+    width: 50%;
+}
+.cont-block {
+    width: 50%;
+    vertical-align: top;
+    margin-bottom: 2em;
+}
+#contacts button {
+
+    width: 50%;
+}
+
+footer {
+    background-color:#2b3438; 
+}
+footer .header-item,footer .header-item a,footer p, footer a:visited {
+    font-weight: 700;
+    color: rgba(0,0,0,0.6); 
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1); 
+}
+footer .header-item {
+    opacity: 0.5;
+    font-weight: 100;
+} 
+footer p {
+    opacity: 0.5;
+}
+/****************************Call form*******************/
+.overlay{
+    background:transparent url(../img/overlay.png) repeat top left;
+    position:fixed; /* фиксим и далее растягиваем на весь экран*/
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:100;
+}
+.nonebox{
+    border-radius: 11px;
+     position:fixed;
+     top:-600px;
+     left:30%;
+     right:30%;
+     background:#fff;
+     color:#4d4d4d;
+     padding:20px;
+     border:5px solid #e4e4e4;
+     padding:25px;
+     z-index:101; 
+}
+a.box-close{
+     float:right;
+     width:26px;
+     height:26px;
+     background:url('../img/close.png') repeat top left;;
+     margin:-30px -30px 0px 0px;
+     cursor:pointer;
+}
+.nonebox fieldset { margin: 0 0 15px 0;}
+.nonebox fieldset label { display: block; margin: 0 0 3px 0; font-weight: bold;  font-size: 0.8em;}
+.nonebox fieldset input, .nonebox fieldset textarea {width: 100%; padding-bottom: 10px; }
+.nonebox fieldset textarea {width: 100%; padding-bottom: 1.2em;} 
+.nonebox fieldset input:focus, .nonebox fieldset textarea:focus{border:.15em solid #015778;
+    -webkit-box-shadow:0 0 1em .1em rgba(2,70,232,0.25);-moz-box-shadow:0 0 1em .1em rgba(2,70,232,0.25);box-shadow:0 0 1em .1em rgba(2,70,232,0.25);}
+.nonebox fieldset textarea:focus{border:.15em solid #015778;}
+#SendFormButton {
+    background-color: gray;
+    font-size: 1em;
+    padding: 0;
+}
+/********************************************************/
