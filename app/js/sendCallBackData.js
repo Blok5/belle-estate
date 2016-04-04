@@ -23,18 +23,20 @@ function sendCallBackData(){
  
   var xhr = new XMLHttpRequest();
 
-  console.log("Отправка...");
+  console.log("Sending...");
 
-  xhr.open('POST', 'heandler.php');
+  xhr.open('POST', './js/heandler.php');
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-  xhr.setRequestHeader('Connection', 'close');
 
   xhr.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
         console.log(this.responseText);
     }           
   };
+  xhr.onerror = function() {
+    alert('Извините, данные не были переданы');
+  }
   xhr.send(params);
 
   var but = document.getElementById('SendFormButton');

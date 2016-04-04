@@ -6,7 +6,7 @@
     $email = $_POST['email'];
     $message = $_POST['message'];
     //setcookie('mail', 'sendmail');
-    mail('Simakoff10@mail.ru', 'Заказ обратного звонка на сайте Get-Apps', 'Вам написал: '.$name. ' Его телефон: ' 
+    mail('Simakoff10@mail.ru', 'Был сделан заказ обратного звонка на сайте Belle-Estate', 'Вам написал: '.$name. ' Его телефон: ' 
     	.$phone. ' Его почта: '.$email.' Его сообщение: '.$message, "Content-type:text/html;charset=utf-8");
-    echo "Сообщение отправлено!";
+    echo "Send done!";
 //}
