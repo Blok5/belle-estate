@@ -105,7 +105,6 @@ h5 {
 .menu {
     margin-left: 30%;
     line-height: 70px;
-    display: inline-block;
     width: 70%;
 }
 .header-item {
@@ -182,7 +181,6 @@ h5 {
     vertical-align: top;
 }
 .ico_car, .ico_design, .ico_documents, .ico_people, .ico_search, .ico_boat {
-  display: inline-block;
   background-image: url(../img/icons/spritebox-sprite.png);
   background-repeat: no-repeat
 }
@@ -242,6 +240,9 @@ h5 {
 .offers-req a img {
     max-width: 100%;
     opacity: 0.2;
+    width: 250px;
+    height: 150px;    
+
 }
 .offers-req a img:hover {
     opacity: 0.6;
@@ -279,8 +280,8 @@ footer {
 }
 footer .header-item,footer .header-item a,footer p, footer a:visited {
     font-weight: 700;
-    color: rgba(0,0,0,0.6); 
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.1); 
+    color: rgba(0,0,0,0.7); 
+    text-shadow: 2px 2px 1px rgba(255,255,255,0.1); 
 }
 footer .header-item {
     opacity: 0.5;
@@ -329,7 +330,22 @@ a.box-close{
 .nonebox fieldset textarea:focus{border:.15em solid #015778;}
 #SendFormButton {
     background-color: gray;
-    font-size: 1em;
     padding: 0;
+    width: 40%;
+    margin-left: 30%;
 }
+
 /********************************************************/
+.head-fixed {
+    display: none;
+    background-color: #2b3438; 
+    position: fixed; 
+    top: 0px;
+}
+
+.head-fixed .logo a img {
+    height: 100%;
+}
+.logo a img {
+    width: 70%;
+}

@@ -7,16 +7,16 @@ function sendCallBackData(){
   var params = 'name=' + name + '&phone=' + phone + '&email=' + email + '&message=' + message;
         
   if ( name ) { document.getElementById('name').setAttribute('style', 'border: 1px solid green;box-shadow: 2px 2px 3px green;');
-    } else { document.getElementById('name').setAttribute('style', 'border: 1px solid red;box-shadow: 2px 2px 3px red;');} 
+    } else { document.getElementById('name').setAttribute('style', 'border: 1px solid red;');} 
   if ( phone ) { document.getElementById('phone').setAttribute('style', 'border: 1px solid green;box-shadow: 2px 2px 3px green;');
-    } else { document.getElementById('phone').setAttribute('style', 'border: 1px solid red;box-shadow: 2px 2px 3px red;');}
+    } else { document.getElementById('phone').setAttribute('style', 'border: 1px solid red;');}
   if ( message ) { document.getElementById('message').setAttribute('style', 'border: 1px solid green;box-shadow: 2px 2px 3px green;');
-    } else { document.getElementById('message').setAttribute('style', 'border: 1px solid red;box-shadow: 2px 2px 3px red;');} 
+    } else { document.getElementById('message').setAttribute('style', 'border: 1px solid red;');} 
 
   if (!okGo.checkValidity()){ 
 
     var but = document.getElementById('SendFormButton');
-    but.setAttribute('style', 'color: red;box-shadow: 2px 2px 3px red;border: 1px solid red;');
+    but.setAttribute('style', 'color: red;border: 1px solid red;');
     but.innerHTML = "Заполните форму корректно!";
     return;
   }

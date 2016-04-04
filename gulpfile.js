@@ -41,9 +41,7 @@ gulp.task('html' , function () {
 
 //js
 gulp.task('js' , function () {
-	return gulp.src('./js/*.js')
-		  .pipe(rename('js.js'))
-		  .pipe(gulp.dest('app/js'))
+	return gulp.src('./app/js/*.js')
 		  .pipe(connect.reload())
           .pipe(notify('Done'));
 });
