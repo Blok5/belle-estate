@@ -7,13 +7,27 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
 		<meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, недвижимость">
 		<meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
-		<link rel="stylesheet" href="css/css.min.css" >
-
 		<script src = "vendors/jquery-2.1.4.min.js"></script>
 		<script async src="js/changeTopSec.js"></script>
-
-		
+		<link property="stylesheet" rel="stylesheet" href="css/css.min.css">
 		<style>
+			.head {
+				width: 100%;
+			}
+			.main {
+			    padding-top: 5em;
+			    display: table;
+			    height: 80%;
+			}
+			.tcell {
+			    vertical-align: middle;
+			    display: table-cell;
+			}
+			#top-sec {
+			    min-height: 668px;
+			    position: relative;
+			    max-height: 1024px;
+			}
 			.color1{
 				background: url(img/1.jpg);
 				background-attachment:fixed;
@@ -52,7 +66,7 @@
 	<body>
 		<header class="head">
 			<div class = "logo" >
-				<a href="http://belle-estate.com/"><img src="img/logo.png"></a>
+				<a href="http://belle-estate.com/"><img alt="Logo" src="img/logo.png"></a>
 			</div><!--
 			--><div class = "menu" >
 			    	<ul>
@@ -67,9 +81,9 @@
 		<section id="top-sec">			   	
 		    <div class="center container main">
 		    	<div class="tcell">
+		    		<h1>BELLE ESTATE<br>
+					Консалтинговая компания. </h1>
 		    		<span>
-		    			<h1>BELLE ESTATE<br>
-						Консалтинговая компания. </h1>
 						Недвижимость по рекомендации.<br>
 						Приобретение недвижимости в самом изысканном и эмоциональном месте земного шара.<br>
 						Лазурное побережье Франции, Княжество Монако, Италия.<br>
@@ -140,18 +154,19 @@
 		</section>
 
 		<section id="offers" class="center padding-top-bot">
+		<h2>ДЛЯ ВАС</h2>
 		<div class="container animate">
 			<div class="offers-req">
 				<div style="margin-left: 1.7em;"  class="offers-text"> Покупка</div>
-				<a href="buy.html"><img class="animate" src="img/buy.jpg"></a>
+				<a href="buy.html"><img class="animate" alt="buy" src="img/buy.jpg"></a>
 			</div>
 			<div class="offers-req">
 				<div class="offers-text"> Аренда</div>
-				<a href="rent.html"><img class="animate" src="img/rent.jpg"></a>
+				<a href="rent.html"><img class="animate" alt="rent" src="img/rent.jpg"></a>
 			</div>
 			<div class="offers-req">
 				<div class="offers-text"> Услуги</div>
-				<a href="services.html"><img class="animate" src="img/ysl.jpg"></a>
+				<a href="services.html"><img class="animate" alt="service" src="img/ysl.jpg"></a>
 			</div>
 		</div>	
 		</section>
@@ -196,10 +211,11 @@
 			<p class="center">©&nbsp;2015-2016 <a href="http://belle-estate.com"> Belle Estate</a></p>
 		</footer>
 
-		<!--*********************************Fixed - header**********************-->	
+		<!--*********************************Fixed - header**********************-->
+
 		<div id="head-fixed" class=" head head-fixed">
 			<div class = "logo" >
-				<a href="http://belle-estate.com/"><img src="img/logo.png"></a>
+				<a property='stylesheet' href="http://belle-estate.com/"><img alt="logo" src="img/logo.png"></a>
 			</div><!--
 			--><div class = "menu" >
 			    	<ul>
@@ -234,13 +250,13 @@
 		        </fieldset>              
 		    </form>
 		<button id="SendFormButton" class="myButton" onclick="sendCallBackData()">Отправить</button>
-
+		</div>
+		
 		<script src="js/scroll.js"></script>
 		<script src="js/toggleFixedMenu.js"></script>
 		<script src="js/sendCallBackData.js"></script>  
 		<script src="js/modalWindow.js"></script>
 		<!--************************************************************************-->	
 		<!--******************************fixed - header***************************-->	
-
 	</body>
 </html>

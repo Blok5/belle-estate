@@ -90,7 +90,6 @@ h5 {
     z-index: 10;
     position: absolute;
     height: 70px;
-    width: 100%;
     background-color: rgba(0, 0, 0, 0);
 }
 .logo {
@@ -113,21 +112,6 @@ h5 {
     margin-left: 5%;
 }
 /***************************MainBlock section***********************/
-
-.main {
-    padding-top: 5em;
-    display: table;
-    height: 80%;
-}
-.tcell {
-    vertical-align: middle;
-    display: table-cell;
-}
-#top-sec {
-    min-height: 668px;
-    position: relative;
-    max-height: 1024px;
-}
 
 .wrap span {
     color: rgba(255,255,255,0.9);
@@ -225,6 +209,10 @@ h5 {
 #offers {
     background-color: white;
     padding: 50px 0 50px 0;
+}
+#offers h2 {
+    color: #72a8cc;
+    margin: 0 0 2em;
 }
 .offers-req {
     height: 150px;
