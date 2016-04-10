@@ -17,8 +17,7 @@ gulp.task('connect', function() {
 
 //css
 gulp.task('css', function () {
-	return gulp.src('./css/*.css')
-    		.pipe(concatCSS("css.css"))
+	return gulp.src('./css/css.css')
     		.pipe(autoprefixer('last 3 versions'))
     		.pipe(uncss({
     			html: ['app/index.html']
@@ -29,7 +28,19 @@ gulp.task('css', function () {
     		.pipe(connect.reload())
     		.pipe(notify('Done'));
 });
-
+//css
+gulp.task('cssHandheld', function () {
+    return gulp.src('./css/handheld.css')
+            .pipe(autoprefixer('last 3 versions'))
+            .pipe(uncss({
+                html: ['app/index.html']
+            }))
+            .pipe(cleanCSS())
+            .pipe(rename('handheld.min.css'))
+            .pipe(gulp.dest('app/css'))
+            .pipe(connect.reload())
+            .pipe(notify('Done'));
+});
 //html
 gulp.task('html' , function () {
 	return gulp.src('./index.html')
@@ -48,9 +59,10 @@ gulp.task('js' , function () {
 
 //watch
 gulp.task('watch', function () {
-	gulp.watch(['./css/*.css'], ['css']);
+	gulp.watch(['./css/css.css'], ['css']);
 	gulp.watch(['./*.html'], ['html']);
     gulp.watch(['./js/*.js'], ['js']);
+    gulp.watch(['./css/handheld.css'], ['cssHandheld']);
 });
 
 //default

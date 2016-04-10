@@ -86,7 +86,11 @@ h5 {
     max-width: 1000px;
 }
 /*********************Header section*****************************/
+.head button {
+    display: none;
+}
 .head {
+    width: 100%;     
     z-index: 10;
     position: absolute;
     height: 70px;
@@ -142,7 +146,23 @@ h5 {
 .myButton:active {
     background-color: rgba(255,255,255, 0.2);
 }
-
+.main {
+    padding-top: 5em;
+    display: table;
+    height: 80%;
+}
+.head {
+    width: 100%;
+}
+.tcell {
+    vertical-align: middle;
+    display: table-cell;
+}
+#top-sec {
+    min-height: 668px;
+    position: relative;
+    max-height: 1024px;
+}
 /**********************Icons and whyWe sec****************************/
 .main-icons {
     margin-top: 30px;
@@ -204,10 +224,15 @@ h5 {
   height: 64px;
   width: 64px
 }
-
+.blok { vertical-align: top; }
+.icons {
+    transition: all 1s ease;
+}
+.body-icon:hover .icons{
+    transform: rotateY(360deg);
+}
 /*********************Offers section*****************************/
 #offers {
-    background-color: white;
     padding: 50px 0 50px 0;
 }
 #offers h2 {
@@ -246,6 +271,7 @@ h5 {
     border-bottom: 4px solid #72a8cc;
     
 }
+
 /**********************footer section****************************/
 #contacts h2 {
     margin-top: 0;
@@ -262,7 +288,10 @@ h5 {
 
     width: 50%;
 }
-
+.contacts-cont {
+    width: 50%;
+    vertical-align: top;
+}
 footer {
     background-color:#2b3438; 
 }
@@ -337,3 +366,47 @@ a.box-close{
 .logo a img {
     width: 70%;
 }
+/***************************Suggest-section******************************/
+.suggest ul {
+    list-style-type: square;
+}
+.suggest ul ul {
+    list-style-type: square;
+    margin-left: 2em;
+    margin-bottom: 0em;
+}
+.white {
+    background-color: white;
+    color: #72a8cc;
+}
+.blue {
+    background-color: #72a8cc;
+}
+.suggest ul li {
+    margin-bottom: 2em;
+    vertical-align: top;
+    list-style-type: square;
+}
+.check-mark {
+    background-image: url(../img/icons/nike.png);
+    background-repeat: no-repeat;
+    height: 64px;
+    width: 64px;
+}
+.suggest-body-icon {
+    margin: 0 0 2em 0;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+.suggest-body-icon:hover .icons{
+    transform: scale(1.3);
+}
+.suggest-body-icon:hover {
+    cursor: pointer;
+}
+.suggest-tog1, .suggest-tog2 {
+    text-align: left;
+    width: 100%;
+}
+/*********************************************************/

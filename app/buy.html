@@ -7,8 +7,79 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
         <meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, недвижимость">
         <meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
+        <script src = "vendors/jquery-2.1.4.min.js"></script>
+        <script async src="js/changeTopSec.js"></script>
+        <link property="stylesheet" rel="stylesheet" href="css/css.min.css">
 </head>
+
 <body>
-Купить жилье
+    <header class="head">
+        <div class = "logo" >
+            <a href="http://belle-estate.com/"><img title="Consulting company 'Belle-Estate'" alt="Belle-Estate" src="img/logo.png"></a>
+        </div><!--
+      --><div class = "menu" >
+            <ul>
+                <li class="header-item"><a href="#top-sec">Главная</a></li><!--
+             --><li class="header-item"><a href="#whyWe">О нас
+                </a></li><!--
+             --><li class="header-item"><a href="#offers">Предложения</a></li><!--
+             --><li class="header-item"><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <p style="padding-top: 100px;">
+                Княжество Монако – «налоговая гавань», расположенная в самом сердце Лазурного берега. Высокий уровень жизни, престижность, безопасность и новейшие системы здравоохранения делают инвестиции в здешнюю недвижимость перспективными и экономически привлекательными.
+            </p>
+        </div>
+    </section>
+
+
+
+    <div class="overlay" id="overlay" style="display:none;"></div> 
+        <div class="nonebox" id="nonebox">  <!--this is block which we are hide-->
+            <a class="box-close" id="box-close"></a>  <!--clock for close-->
+            <h4 style="text-align: center; padding-bottom: 0.5em;">Свяжитесь с нами: </h4>
+            <form name="okGo" id="okGo">
+                <fieldset>
+                    <label>Ваше имя*</label>
+                    <input id="name" type="text" required>
+                </fieldset>
+                <fieldset>
+                    <label>Ваше телефон*</label>
+                    <input id="phone" type="tel" required>
+                </fieldset>
+                <fieldset>
+                    <label>Ваш E-mail</label>
+                    <input id="email" type="email">
+                </fieldset>
+                <fieldset>
+                    <label>Сообщение*</label>
+                    <textarea id="message" required></textarea>
+                </fieldset>              
+            </form>
+        <button id="SendFormButton" class="myButton" onclick="sendCallBackData()">Отправить</button>
+        </div>
+
+    <footer>
+        <div class = "menu inline-block" >
+            <ul>
+                <li class="header-item"><a href="#top-sec">Главная</a></li><!--
+             --><li class="header-item"><a href="#whyWe">О нас</a></li><!--
+             --><li class="header-item"><a href="#offers">Предложения</a></li><!--
+             --><li class="header-item"><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+            <!-- target="_blank" - Чтобы открывать ссылку в новой вкладке, 
+            rel="nofollow" - Чтобы не передавать вес на внешнюю ссылку
+             -->
+        <p class="center">©&nbsp;2015-2016 <a href="http://belle-estate.com"> Belle Estate</a></p>
+    </footer>
+        <script src="js/scroll.js"></script>
+        <script src="js/toggleFixedMenu.js"></script>
+        <script src="js/sendCallBackData.js"></script>  
+        <script src="js/modalWindow.js"></script>
 </body>
 </html>

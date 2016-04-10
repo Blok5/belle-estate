@@ -1,0 +1,66 @@
+.menu {
+    display: none;
+    background-color: #D3D3D3;
+}
+.myButton {
+    width: 40%;
+}
+.head .myButton {
+    display: block;
+    position: fixed;
+    top: 0px;
+    width: 54px;
+    height: 48px;
+    background: url(../img/icons/menu-alt.svg);
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    padding: 0em;
+    border: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+.logo {
+    right: 0px;
+    width: 100%;
+}
+.logo img {
+    margin-left: 14%;
+    width: 80%;
+}
+#top-sec h1 {
+    display: none;
+}
+.main {
+    padding-top: 10em;
+}
+.menu .header-item {
+    display: block;
+    margin-left: 0px;
+}
+.head-fixed {
+    display: none;
+}
+.menu {
+    text-align: center;
+    position: fixed;
+}
+.nonebox {
+    left: 10%;
+    right: 10%;
+
+}
+.offers-text {
+    font-size: 1em;
+}
+.map {
+    display: block;
+    width: 100%;
+}
+.contacts-cont {
+    width: 100%;
+    vertical-align: top;
+}
+.offers-req {
+    width: 100%;
+    font-size: 1.7em;
+}

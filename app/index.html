@@ -5,29 +5,15 @@
 		<meta name="description" content="Консалтинговая компания 'Belle Estate' ">
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
-		<meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, недвижимость">
+		<meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, апартаменты на лазурном берегу, лазурный берег, недвижимость">
 		<meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
 		<script src = "vendors/jquery-2.1.4.min.js"></script>
 		<script async src="js/changeTopSec.js"></script>
-		<link property="stylesheet" rel="stylesheet" href="css/css.min.css">
+		<link rel="stylesheet" href="css/css.min.css" media="screen"/>
+		<link rel= "stylesheet" href="css/handheld.min.css" media="handheld,only screen and (max-device-width:480px)"/>
+
 		<style>
-			.head {
-				width: 100%;
-			}
-			.main {
-			    padding-top: 5em;
-			    display: table;
-			    height: 80%;
-			}
-			.tcell {
-			    vertical-align: middle;
-			    display: table-cell;
-			}
-			#top-sec {
-			    min-height: 668px;
-			    position: relative;
-			    max-height: 1024px;
-			}
+
 			.color1{
 				background: url(img/1.jpg);
 				background-attachment:fixed;
@@ -65,9 +51,11 @@
 	</head>
 	<body>
 		<header class="head">
+			<button class="myButton menu-click"></button>
 			<div class = "logo" >
-				<a href="http://belle-estate.com/"><img alt="Logo" src="img/logo.png"></a>
+				<a href="http://belle-estate.com/"><img title="Consulting company 'Belle-Estate'" alt="Belle-Estate" src="img/logo.png"></a>
 			</div><!--
+			--><!--
 			--><div class = "menu" >
 			    	<ul>
 				    	<li class="header-item"><a href="#top-sec">Главная</a></li><!--
@@ -76,37 +64,39 @@
 				     --><li class="header-item"><a href="#contacts">Контакты</a></li>
 			     	</ul>
 			</div>
+
 		</header>
 		    	
 		<section id="top-sec">			   	
 		    <div class="center container main">
 		    	<div class="tcell">
 		    		<h1>BELLE ESTATE<br>
-					Консалтинговая компания. </h1>
+					Консалтинговая компания</h1>
 		    		<span>
 						Недвижимость по рекомендации.<br>
-						Приобретение недвижимости в самом изысканном и эмоциональном месте земного шара.<br>
-						Лазурное побережье Франции, Княжество Монако, Италия.<br>
+						Приобретение недвижимости в одном из самых красивых и роскошных мест земного шара.<br>
+						Княжество Монако, Лазурное побережье Франции, Лигурийская Ривьера и вся Италия.<br>
 						Индивидуальный подход к каждому клиенту.<br>
 						На нашем сайте представлены не все предложения.<br>
 						Свяжитесь с нами и мы найдем Вам недвижимость Вашей мечты.<br>
 	    			</span>
 	    			<div class="buttons">
-		    			<button type="button" class="myButton call">Обратный звонок</button>
-		    			<a href="#whyWe"><button style="margin-left: 5%;" class="myButton">Почему мы?</button></a>
+		    			<button type="button" class="myButton call">Обратный звонок</button><!--
+		    			--><button style="margin-left: 5%;" class="myButton"><a href="#whyWe">Почему мы?</a></button>
 		    		</div>
 	    		</div>
 	    	</div>    	    		
 		</section> 
 
-		<section id="whyWe" class="center container">
+		<section id="whyWe" class="center blue">
+		<div class="container">
 			<h2>ЧЕМ МЫ МОЖЕМ БЫТЬ ВАМ ПОЛЕЗНЫ</h2>
 			<div class="main-icons">
 				<div class="body-icon">
 					<div class="blok">
 						<div class="icons ico_search"></div>	
 						<div class="icon-text">					
-							Подбор недвижимости по заданным Вами параметрам. Туры по объектам.
+							Индивидуальный подбор недвижимости по заданным Вами параметрам.
 						</div>
 					</div>
 				</div><!--
@@ -122,7 +112,7 @@
 					<div class="blok">
 						<div class="icons ico_people"></div>	
 						<div class="icon-text">					
-							Послепродажное абонентское обслуживание и сопровождение вида на жительство.
+							Последующее абонентское обслуживание и сопровождение в получении вида на жительство.
 						</div>
 					</div>
 				</div><!--	
@@ -150,33 +140,106 @@
 						</div>
 					</div>
 				</div>
-			</div>			
+			</div>
+		</div>			
 		</section>
 
-		<section id="offers" class="center padding-top-bot">
-		<h2>ДЛЯ ВАС</h2>
+		<section id="offers" class="center padding-top-bot white">
+		<h2>Подробнее</h2>
 		<div class="container animate">
 			<div class="offers-req">
-				<div style="margin-left: 1.7em;"  class="offers-text"> Покупка</div>
-				<a href="buy.html"><img class="animate" alt="buy" src="img/buy.jpg"></a>
+				<div style="margin-left: 1.7em;"  class="offers-text">Недвижимость</div>
+				<a href="buy.html"><img title="buy real-estate" class="animate" alt="buy" src="img/buy.jpg"></a>
 			</div>
-			<div class="offers-req">
+			<!--<div class="offers-req">
 				<div class="offers-text"> Аренда</div>
-				<a href="rent.html"><img class="animate" alt="rent" src="img/rent.jpg"></a>
-			</div>
-			<div class="offers-req">
+				<a href="rent.html"><img title="rent real-estate" class="animate" alt="rent" src="img/rent.jpg"></a>
+			</div>-->
+			<!--<div class="offers-req">
 				<div class="offers-text"> Услуги</div>
-				<a href="services.html"><img class="animate" alt="service" src="img/ysl.jpg"></a>
-			</div>
+				<a href="services.html"><img title="service real-estate" class="animate" alt="service" src="img/ysl.jpg"></a>
+			</div>-->
 		</div>	
 		</section>
+
+		<section class="blue">
+		<div class="container suggest center">
+			<h2 >Мы предлагаем:</h2>
+			<div class="main-icons">
+				<div class="suggest-body-icon">
+					<div class="blok">
+						<div class="icons check-mark"></div>	
+						<div class="icon-text">					
+							Поиск и приобретение по Вашему запросу недвижимости, которая не только будет доставлять Вам радость, но и приносить доход.
+						</div>
+					</div>
+				</div><!--
+			 --><div class="suggest-body-icon">
+					<div class="blok">
+						<div class="icons check-mark"></div>
+						<div class="icon-text">
+							Широкий спектр услуг по оформление сделки, а также последующее абонентское обслуживание и управление вашим имуществом.
+						</div>
+					</div>	
+				</div><!--
+			 --><div class="suggest-body-icon">
+					<div class="blok">
+						<div class="icons check-mark"></div>	
+						<div class="icon-text">					
+							Комплексную диагностику объектов и структуры владения бизнесом. Мы проводим оценку возможных рисков в свете последнего изменения законодательства.
+						</div>
+					</div>
+				</div><!--	
+			 --><div class="suggest-body-icon">
+					<div class="blok">
+						<div class="icons check-mark"></div>	
+						<div class="icon-text">		
+							Профессиональное консалтинговое сопровождение в получении вида на жительство.			
+						</div>
+					</div>
+				</div><!--
+			 --><div class="suggest-body-icon">
+					<div class="blok sug-click1">
+						<div class="icons check-mark"></div>	
+						<div class="icon-text">
+							Полный спектр юридических услуг(подробнее):
+						</div>
+					</div>	
+				</div><!--
+			 --><div class="suggest-body-icon">
+					<div class="blok sug-click2">
+						<div class="icons check-mark"></div>	
+						<div class="icon-text">					
+							Дополнительные услуги(подробнее):
+						</div>
+					</div>
+				</div><!--
+				--><div style="display: none;" class="suggest-tog1">
+					<ul>
+						<li>Проверка и анализ выбранных объектов на юридическую чистоту</li>
+						<li>Спектр консультативных услуг по финансовым условиям получения кредита</li>
+						<li>Налоговые консультации</li>
+						<li>Защита Ваших интересов в суде</li>
+					</ul>
+				</div><!--
+				--><div style="display: none;" class="suggest-tog2">
+					<ul>
+						<li>Встреча в аэропорту на автомобиле бизнес-класса</li>
+						<li>Аренда и покупка яхт. Обеспечиваем участие в парусных регатах</li>
+						<li>Услуги в области ремонтных работ и дизайнерского оформления</li>
+						<li>Помощь в организации праздников, банкетов, вечеринок на Лазурном берегу</li>
+					</ul>
+				</div>
+			</div>
+		</div>			
+    	</section>
 
 		<section id="contacts" class="padding-top-bot container" >
 			<div class="inline-block map">
 				<iframe style="width: 100%;" src="https://www.google.com/maps/d/u/0/embed?mid=zLJVLdivL68o.katXN3k0Jlq8" height="350"></iframe>
 			</div><!--
 
-		 --><div style="width: 50%; vertical-align: top;" class="to-right center inline-block">
+		 --><div class="to-right center inline-block contacts-cont">
 				<h2>Наши контакты:</h2>
 				<div>
 					<h4>Via Luigi Nuvoloni, 18, 18038 Sanremo IM, Italy</h4>
@@ -198,13 +261,10 @@
 			</div>
 
 		</section> 
-
-
 		<!--*********************************Fixed - header**********************-->
-
 		<div id="head-fixed" class=" head head-fixed">
 			<div class = "logo" >
-				<a property='stylesheet' href="http://belle-estate.com/"><img alt="logo" src="img/logo.png"></a>
+				<a property='stylesheet' href="http://belle-estate.com/"><img title="Belle-Estate logo" alt="logo" src="img/logo.png"></a>
 			</div><!--
 			--><div class = "menu" >
 			    	<ul>
@@ -239,15 +299,8 @@
 		        </fieldset>              
 		    </form>
 		<button id="SendFormButton" class="myButton" onclick="sendCallBackData()">Отправить</button>
-		</div>
-		
-		<script src="js/scroll.js"></script>
-		<script src="js/toggleFixedMenu.js"></script>
-		<script src="js/sendCallBackData.js"></script>  
-		<script src="js/modalWindow.js"></script>
-		<!--************************************************************************-->	
-		<!--******************************fixed - header***************************-->	
-
+		</div>		
+		<!--******************************************Footer***************************-->	
 		<footer>
 			<div class = "menu inline-block" >
 			    	<ul>
@@ -257,8 +310,17 @@
 				     --><li class="header-item"><a href="#contacts">Контакты</a></li>
 			     	</ul>
 			</div>
+			<!-- target="_blank" - Чтобы открывать ссылку в новой вкладке, 
+			rel="nofollow" - Чтобы не передавать вес на внешнюю ссылку
+			 -->
 			<p class="center">©&nbsp;2015-2016 <a href="http://belle-estate.com"> Belle Estate</a></p>
 		</footer>
 
+		<script src="js/scroll.js"></script>
+		<script src="js/toggleFixedMenu.js"></script>
+		<script src="js/sendCallBackData.js"></script>  
+		<script src="js/modalWindow.js"></script>
+		<script src="js/toggleSuggest.js"></script>
+		<script src="js/handheld.js"></script>
 	</body>
 </html>
