@@ -1,9 +1,6 @@
-.menu {
-    display: none;
-    background-color: #D3D3D3;
-}
 .myButton {
     width: 40%;
+    padding: 0;
 }
 .head .myButton {
     display: block;
@@ -41,13 +38,20 @@
     display: none;
 }
 .menu {
+    display: none;
+    background-color: rgba(46, 46, 46, 0.96);
     text-align: center;
     position: fixed;
+    margin-left: 0;
+    width: 100%;
+    line-height: 100px;
+}
+.menu ul {
+    font-size: 1.2em;
 }
 .nonebox {
     left: 10%;
     right: 10%;
-
 }
 .offers-text {
     font-size: 1em;
@@ -63,4 +67,13 @@
 .offers-req {
     width: 100%;
     font-size: 1.7em;
+}
+.icon-text {
+    text-align: center;
+}
+.suggest-body-icon:hover .icons{
+    transform: none;
+}
+.body-icon:hover .icons{
+    transform: none;
 }

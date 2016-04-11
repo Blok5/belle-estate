@@ -8,12 +8,8 @@
 		<meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, апартаменты на лазурном берегу, лазурный берег, недвижимость">
 		<meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
 		<script src = "vendors/jquery-2.1.4.min.js"></script>
-		<script async src="js/changeTopSec.js"></script>
-		<link rel="stylesheet" href="css/css.min.css" media="screen"/>
-		<link rel= "stylesheet" href="css/handheld.min.css" media="handheld,only screen and (max-device-width:480px)"/>
 
-		<style>
-
+		<style >
 			.color1{
 				background: url(img/1.jpg);
 				background-attachment:fixed;
@@ -45,11 +41,11 @@
 			$(function() {			    
 			    var topHeight = document.documentElement.clientHeight;
 		        if (topHeight > 1024) { topHeight = 1080; }
-		      	document.getElementById('top-sec').setAttribute('style','height:' + topHeight + 'px'); 
+		      	document.getElementById('top-sec1').setAttribute('style','height:' + topHeight + 'px'); 
 			});		     			
 		</script>
 	</head>
-	<body>
+	<body id="top-sec">
 		<header class="head">
 			<button class="myButton menu-click"></button>
 			<div class = "logo" >
@@ -67,7 +63,7 @@
 
 		</header>
 		    	
-		<section id="top-sec">			   	
+		<section id="top-sec1">			   	
 		    <div class="center container main">
 		    	<div class="tcell">
 		    		<h1>BELLE ESTATE<br>
@@ -144,25 +140,14 @@
 		</div>			
 		</section>
 
-		<section id="offers" class="center padding-top-bot white">
-		<h2>Подробнее</h2>
-		<div class="container animate">
-			<div class="offers-req">
-				<div style="margin-left: 1.7em;"  class="offers-text">Недвижимость</div>
-				<a href="buy.html"><img title="buy real-estate" class="animate" alt="buy" src="img/buy.jpg"></a>
+		<section id="offers" class="center padding-top-bot">
+			
+			<div class="container">
+				<div class="offers-inner animate"><a href="buy.html"><h2>Узнать подробнее</h2></a></div>
 			</div>
-			<!--<div class="offers-req">
-				<div class="offers-text"> Аренда</div>
-				<a href="rent.html"><img title="rent real-estate" class="animate" alt="rent" src="img/rent.jpg"></a>
-			</div>-->
-			<!--<div class="offers-req">
-				<div class="offers-text"> Услуги</div>
-				<a href="services.html"><img title="service real-estate" class="animate" alt="service" src="img/ysl.jpg"></a>
-			</div>-->
-		</div>	
 		</section>
 
-		<section class="blue">
+		<section id="sug" class="blue">
 		<div class="container suggest center">
 			<h2 >Мы предлагаем:</h2>
 			<div class="main-icons">
@@ -234,9 +219,10 @@
 		</div>			
     	</section>
 
-		<section id="contacts" class="padding-top-bot container" >
+		<section id="contacts" class="padding-top-bot blue">
+			<div class="container">
 			<div class="inline-block map">
-				<iframe style="width: 100%;" src="https://www.google.com/maps/d/u/0/embed?mid=zLJVLdivL68o.katXN3k0Jlq8" height="350"></iframe>
+				<iframe async style="width: 100%;" src="https://www.google.com/maps/d/u/0/embed?mid=zLJVLdivL68o.katXN3k0Jlq8" height="350"></iframe>
 			</div><!--
 
 		 --><div class="to-right center inline-block contacts-cont">
@@ -244,22 +230,22 @@
 				<div>
 					<h4>Via Luigi Nuvoloni, 18, 18038 Sanremo IM, Italy</h4>
 					<div class="cont-block inline-block">
-						<h5>Russia</h5>
-						<p>Elena 
+						<h5>Россия</h5>
+						<p>Елена 
 						<a href ="tel:+79264008404">+7 926 400 84 04</a>
 						</p>
-						<p>Eleonora 
+						<p>Элеонора 
 						<a href ="tel:+79165098340">+7 916 509 83 40</a>
 						</p>							
 					</div><!--
 				 --><div class="cont-block inline-block">
-						<h5>Italy</h5>
+						<h5>Италия</h5>
 						<a href ="tel:+79264008404">+39 366 4244791</a>		
 					</div>
 					<button type="button" class="myButton call">Обратный звонок</button>
 				</div>
 			</div>
-
+			</div>
 		</section> 
 		<!--*********************************Fixed - header**********************-->
 		<div id="head-fixed" class=" head head-fixed">
@@ -316,11 +302,10 @@
 			<p class="center">©&nbsp;2015-2016 <a href="http://belle-estate.com"> Belle Estate</a></p>
 		</footer>
 
-		<script src="js/scroll.js"></script>
-		<script src="js/toggleFixedMenu.js"></script>
-		<script src="js/sendCallBackData.js"></script>  
-		<script src="js/modalWindow.js"></script>
-		<script src="js/toggleSuggest.js"></script>
-		<script src="js/handheld.js"></script>
+		<link rel="stylesheet" href="css/css.min.css" media="screen"/>
+		<link rel= "stylesheet" href="css/handheld.min.css" media="handheld,only screen and (max-device-width:480px)"/>
+		<script async src="js/sendCallBackData.js"></script>
+		<script async src="js/main.js"></script>
+		<script asynk src="js/handheld.js"></script>
 	</body>
 </html>
