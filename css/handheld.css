@@ -8,7 +8,7 @@
     top: 0px;
     width: 54px;
     height: 48px;
-    background: url(../img/icons/menu-alt.svg);
+    background: url(../img/icons/menu-alt.png);
     background-repeat: no-repeat;
     background-size: 48px 48px;
     padding: 0em;
@@ -76,4 +76,13 @@
 }
 .body-icon:hover .icons{
     transform: none;
+}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/Preloader.gif') center no-repeat #fff;
 }

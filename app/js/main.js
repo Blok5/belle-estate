@@ -10,11 +10,13 @@ $(function() {
         }
     });
 
-  //Плавный скроллинг страницы:
+  //scrolling:
     $(function(){
         $('a[href^="#"], a[href^="."]').click( function(){ // если в href начинается с # или ., то ловим клик
-          var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href
-            if ($(scroll_el).length == 0) return; // проверим существование элемента чтобы избежать ошибки
+            var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href
+            if ($(scroll_el).length == 0) {
+                return
+            }; // проверим существование элемента чтобы избежать ошибки
             $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
             
           return false; // выключаем стандартное действие
@@ -37,23 +39,7 @@ $(function() {
         });
     });
 
-
     //change top section
-    $(function(){
-        var colorMas = ["#142736","#163A56","#434A64", "#4B5685"];
-        function changeColor(curNumber){
-
-            curNumber++;
-            if(curNumber > 4){
-                curNumber = 1;
-            }
-            document.getElementById('top-sec').setAttribute('class', 'animate color' + curNumber);
-            //document.getElementById('for-what').setAttribute('class', 'for-what animate textcolor' + curNumber);
-            setTimeout(function(){changeColor(curNumber)}, 6000); 
-            
-        }
-        changeColor(0);
-    }); 
 
     //Modal window
     $(function() {
@@ -79,23 +65,10 @@ $(function() {
     });
 
     function fadeOut() {
-      $('#overlay').fadeOut('fast'); // и теперь убираем оверлэй
+        $('#overlay').fadeOut('fast'); // и теперь убираем оверлэй
     }         
 });
 
-//      (function(){     
- //       var words = ['проектируем', 'разрабатываем', 'поддерживаем'],
-  //          l = words.length,
-   //         i = 0,
-    ///        w = $('#word').text(words[i++]);
-//
-  //      setInterval(function(){ 
-    //      w.text(words[i++]);
-//          if (i >= l) i = 0;
-  //        document.getElementById('top_img').setAttribute('src', 'img/All_for_audi' + i + '.png');
-   //     },6000);
-    //  })();
-    
 
 
 

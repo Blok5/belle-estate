@@ -8,8 +8,27 @@
         <meta name="keywords" content="Консалтинговая компания, недвижимость на лазурном берегу, недвижимость">
         <meta name="author" content="Simakov Igor, Simakoff10@mail.ru">
         <script src = "vendors/jquery-2.1.4.min.js"></script>
-        <script async src="js/changeTopSec.js"></script>
         <link property="stylesheet" rel="stylesheet" href="css/css.min.css">
+        <script>
+            $( window ).load(function() {
+                $(".loader").fadeOut("slow");
+            })
+            $( document ).ready(function() {
+
+                
+
+                var topHeight = document.documentElement.clientHeight;
+                if (topHeight > 1024) { 
+                    topHeight = 1080; 
+                }
+                document.getElementById('top-sec1').setAttribute('style','height:' + topHeight + 'px'); 
+            }); 
+        </script>
+        <style>
+            p {
+                text-indent: 1.5em;
+            }
+        </style>
 </head>
 
 <body>
@@ -28,11 +47,32 @@
         </div>
     </header>
 
+    <section id="top-sec1">
+        <div class="container center main">
+            <div class="tcell">
+                <h1>Консалтинговая компания <br>
+                Belle-Estate</h1>
+                <span>Поможет подобрать вам недвижимость в одном из изысканых мест:<br>
+                Княжество Монако, Лазурное побережье Франции, Лигурийская Ривьера и вся Италия.</span>
+            </div>
+        </div>
+
+    </section>
+
     <section>
         <div class="container">
             <p style="padding-top: 100px;">
                 Княжество Монако – «налоговая гавань», расположенная в самом сердце Лазурного берега. Высокий уровень жизни, престижность, безопасность и новейшие системы здравоохранения делают инвестиции в здешнюю недвижимость перспективными и экономически привлекательными.
             </p>
+            <div class="real-estate">
+                <img width="50%" height="400px" src="img/real/IMG_4881.jpg">
+            </div>
+            <p>
+                Предложения в Монако разнообразны: от ультрамодных студий площадью 28 кв.м. до новейших вилл в парках, представительских апартаментов в новых и старинных домах после полной реконструкции, а также предложения коммерческой недвижимости.
+            </p>
+            <div class="real-estate">
+                <img width="50%" height="400px" src="img/real/IMG_4881.jpg">
+            </div>
         </div>
     </section>
 
