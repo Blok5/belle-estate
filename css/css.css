@@ -117,6 +117,7 @@ h5 {
     width: 80%;
 }
 .menu {
+    display: inline-block;
     margin-left: 30%;
     line-height: 70px;
     width: 70%;

@@ -40,15 +40,41 @@
 		<script>
 			$( window ).load(function() {
 				$(".loader").fadeOut("slow");
-			})
-			$( document ).ready(function() {
+			});
 
-			    var topHeight = document.documentElement.clientHeight;
-		        if (topHeight > 1024) { 
-		        	topHeight = 1080; 
-		        }
-		      	document.getElementById('top-sec1').setAttribute('style','height:' + topHeight + 'px'); 
-			});	
+			$( document ).ready(function() {
+				var topHeight = document.documentElement.clientHeight;	
+
+			    if (topHeight > 1024) { 
+			     	topHeight = 1080; 
+			    }
+
+		    	document.getElementById('top-sec1').setAttribute('style','height:' + topHeight + 'px'); 		
+
+				if (document.documentElement.clientWidth > 480) {
+
+			        function changeColor (curNumber){
+			            var pic = new Image ();
+			            
+			            pic.onload = function () {
+			                document.getElementById('top-sec').setAttribute('class', 'animate color' + curNumber);
+			            };
+
+			            pic.src = 'img/'+curNumber+'.jpg' ;
+			            curNumber++;
+			            if (curNumber > 4) {
+			                curNumber = 1;
+			            }
+			            
+			            setTimeout (function () { 
+			            	changeColor (curNumber)
+			            }, 6000 ); 
+			            
+			        }
+			        changeColor(2);
+		        } 
+
+			});
 		</script>
 	</head>
 	<body>			
@@ -61,10 +87,10 @@
 			</div><!--
 		 --><div class = "menu">
 			    <ul>
-				    <li class="header-item"><a href="#top-sec">Главная</a></li><!--
-				 --><li class="header-item"><a href="#whyWe">О нас</a></li><!--
-				 --><li class="header-item"><a href="#offers">Предложения</a></li><!--
-				 --><li class="header-item"><a href="#contacts">Контакты</a></li>
+				    <a href="#top-sec"><li class="header-item">Главная</li></a><!--
+				 --><a href="#whyWe"><li class="header-item">О нас</li></a><!--
+				 --><a href="#offers"><li class="header-item">Предложения</li></a><!--
+				 --><a href="#contacts"><li class="header-item">Контакты</li></a>
 			    </ul>
 			</div>
 		</header>
@@ -226,8 +252,8 @@
 
 		<section id="contacts" class="padding-top-bot blue">
 			<div class="container">
-			<div class="inline-block map">
-				<iframe style="width: 100%;" src="https://www.google.com/maps/d/u/0/embed?mid=zLJVLdivL68o.katXN3k0Jlq8" height="350"></iframe>
+			<div id="map" class="inline-block map">
+
 			</div><!--
 		 --><div class="to-right center inline-block contacts-cont">
 				<h2>Наши контакты:</h2>
@@ -269,7 +295,7 @@
 		<div class="overlay" id="overlay" style="display:none;"></div> 
 		<div class="nonebox" id="nonebox">  <!--this is block which we are hide-->
 		    <a class="box-close" id="box-close"></a>  <!--clock for close-->
-		    <h2 style="text-align: center; padding-bottom: 0.5em;">Свяжитесь с нами: </h2>
+		    <h3 style="text-align: center; padding-bottom: 0.5em;">Свяжитесь с нами: </h3>
 		    <form name="okGo" id="okGo">
 		        <fieldset>
 		            <label>Ваше имя*</label>
@@ -308,8 +334,25 @@
 		</div>
 		<link rel="stylesheet" property="stylesheet" href="css/css.min.css" media="screen"/>
 		<link rel= "stylesheet" property="stylesheet" href="css/handheld.min.css" media="handheld, only screen and (max-device-width:480px)"/>
-		<script async src="js/sendCallBackData.js"></script>
-		<script async src="js/main.js"></script>
-		<script async src="js/handheld.js"></script>
+		<script>
+			if ( document.documentElement.clientWidth > 480 ) {
+				var script = document.createElement('script');
+				script.src = 'js/main.js';
+				document.head.appendChild(script);
+			}
+			if ( document.documentElement.clientWidth <= 480 ) {
+				var script = document.createElement('script');
+				script.src = 'js/handheld.js';
+				document.head.appendChild(script);
+			}
+			$( window ).load(function() {
+				var map = document.getElementById('map');
+				var ifr = document.createElement('iframe');
+				ifr.src = 'https://www.google.com/maps/d/u/0/embed?mid=zLJVLdivL68o.katXN3k0Jlq8';
+				ifr.style.width='100%';
+				ifr.style.height='350px';
+				map.appendChild(ifr);
+			});
+		</script>
 	</body>
 </html>
